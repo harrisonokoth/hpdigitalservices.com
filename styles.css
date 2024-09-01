@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     color: #333;
     padding-top: 60px; /* Added to prevent content from hiding behind the fixed header */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .container {
@@ -130,6 +131,7 @@ nav ul li a:hover {
 @media screen and (max-width: 768px) {
     .container {
         padding: 10px 0;
+        overflow-x: auto; /* Ensure horizontal overflow is handled */
     }
 
     nav ul {
