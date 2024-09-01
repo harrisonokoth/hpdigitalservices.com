@@ -5,7 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    padding-top: 60px; /* Added to prevent content from hiding behind the fixed header */
+    padding-top: 70px; /* Increase padding to ensure content is below the header */
 }
 
 .container {
@@ -19,28 +19,26 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    padding: 10px 0;
+    padding: 10px 20px; /* Increased padding for better spacing */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed; /* Fixed position */
     top: 0;
     left: 0;
     width: 100%; /* Full width */
     z-index: 1000; /* Ensures header is above other content */
-    height: 60px; /* Fixed header height */
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space out logo and navigation */
 }
 
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
+/* Logo in header */
 header .container img.top-right-logo {
-    height: 50px; /* Set logo height to be slightly less than header height */
-    width: auto; /* Maintain aspect ratio */
+    width: 35px; /* Adjust size to fit better */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
 }
 
+/* Navigation styles */
 nav {
     display: flex;
     align-items: center;
@@ -51,7 +49,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Reduced gap for better fit on small screens */
 }
 
 nav ul li {
@@ -70,6 +68,11 @@ nav ul li a:hover {
 }
 
 /* Section styles */
+section {
+    padding: 20px 0;
+    margin-top: 20px; /* Ensure sections are not hidden behind the header */
+}
+
 h1, h2 {
     color: #007bff;
     margin-bottom: 20px;
@@ -82,15 +85,16 @@ p {
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0; /* Increased padding for better spacing */
     margin-top: 20px;
     position: relative;
     background-color: #007bff;
     color: white;
 }
 
+/* Logo in footer */
 .footer-logo {
-    width: 50px; /* Adjust size as needed */
+    width: 35px; /* Adjust size to fit better */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     transition: transform 0.3s ease;
@@ -106,14 +110,42 @@ nav ul li a:hover {
 /* Responsive design */
 @media screen and (max-width: 768px) {
     .container {
+        width: 95%; /* Adjust width for smaller screens */
+        padding: 10px 0; /* Adjust padding for better fit */
+    }
+
+    header {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        padding: 10px 20px; /* Adjust padding for better spacing */
+    }
+
+    header .container img.top-right-logo {
+        width: 30px; /* Adjust size for mobile */
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 10px; /* Reduced gap for better fit */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px 0; /* Adjust padding for small screens */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjust font size for small screens */
+    }
+
+    nav ul {
+        gap: 5px; /* Further reduce gap for very small screens */
+    }
+
+    nav ul li a {
+        font-size: 0.9em; /* Adjust font size for better fit */
     }
 }
 
