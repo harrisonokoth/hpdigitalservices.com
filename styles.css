@@ -1,0 +1,124 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 60px; /* Added to prevent content from hiding behind the fixed header */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures header is above other content */
+    height: 60px; /* Fixed header height */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container img.top-right-logo {
+    height: 50px; /* Set logo height to be slightly less than header height */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffb700;
+}
+
+/* Section styles */
+h1, h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    background-color: #007bff;
+    color: white;
+}
+
+.footer-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.top-right-logo:hover, 
+.footer-logo:hover, 
+nav ul li a:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* Navigation link active state */
+nav ul li a.active {
+    color: #ffb700; /* Change to your desired active link color */
+    font-weight: bold;
+}
