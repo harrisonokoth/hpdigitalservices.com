@@ -9,6 +9,22 @@ body {
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+  /*Mobile Device Modifications */
+  html {
+    height: -webkit-fill-avalable;
+  }
+  
+  /*Body adjustments*/
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: auto;
+    height: 100vh;
+    height: -webkit-fill-avalable;
+  }
+  
 .container {
     width: 90%;
     max-width: 1200px;
